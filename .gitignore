@@ -1,0 +1,5 @@
+/Dataset/
+/.settings/
+.project
+.pydevproject
+__pycache__/
