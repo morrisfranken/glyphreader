@@ -1,5 +1,13 @@
 # GlyphReader
-A deeplearning approach to classifying the ancient Egyptian hieroglyphs. The source code is written in **python3**
+A deeplearning approach to classifying the ancient Egyptian hieroglyphs. The source code is written in **python3** using the popular [Keras](https://keras.io/) framework (with a [Tensorflow](https://keras.io/) backend).
+It attempts to classify images to their [Gardiner](https://en.wikipedia.org/wiki/Gardiner's_sign_list) labels, such as:
+
+**Image** | ![GitHub Logo](/examples/200000_S29.png) | ![GitHub Logo](/examples/200001_V13.png) | ![GitHub Logo](/examples/200003_G43.png) 
+------------ | ------------ | ------------- | -------------
+**Gardener Label** | S29 | V13 | G43
+
+In addition to the source code, we also provide a dataset containing 4210 manually annotated images of Egyptian hieroglyphs found in the [Pyramid of Unas](https://en.wikipedia.org/wiki/Pyramid_of_Unas).
+The dataset will be automatically downloaded when using `train.py` to train a new classifier, but is also available [here](http://iamai.nl/downloads/GlyphDataset.zip)
 
 ## Requirements
 - `pip3 install numpy sklearn scipy pyyaml h5py`
@@ -34,6 +42,7 @@ image name                ::: top 5 best matching hieroglyphs
 200017_S29.png            --> ['S29' 'O4' 'V28' 'Z7' 'N35']
 ```
 
+## Training
 In case you would like to train your own classifier, use `train.py`. It takes no arguments, but when running it for the first time it will download the dataset, and starts training. Training itself consist of 2 phases:
 
 1. **Feature Extraction** extract deeplearning features from the images (corresponding to the `avg_pool` layer from the `InceptionV3` network).
