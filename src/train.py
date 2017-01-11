@@ -33,7 +33,7 @@ if not exists(dataPath):
     print("downloading dataset (57.5MB)")
     url = urlopen("http://iamai.nl/downloads/GlyphDataset.zip")    
     with ZipFile(BytesIO(url.read())) as z:
-        z.extractall(dataPath)
+        z.extractall(join(dataPath, ".."))
 
 # check if the feature file is present, if so; there is no need to recompute the features
 # The pre-computed features can also be downloiad from http://iamai.nl/downloads/features.npy
