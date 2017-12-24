@@ -15,7 +15,6 @@ class FeatureExtractor:
         
         # Initialise the model to output the second to last layer, which contains the deeplearning featuers  
         self.model.layers.pop() # Get rid of the classification layer
-        self.model.layers.pop() # Get rid of the dropout layer
         self.model.outputs = [self.model.layers[-1].output]
         self.model.layers[-1].outbound_nodes = []
      

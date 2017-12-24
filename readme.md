@@ -11,8 +11,8 @@ The dataset will be automatically downloaded when using `train.py` to train a ne
 
 ## Requirements
 - `pip3 install numpy sklearn scipy pyyaml h5py`
-- [tensorflow](https://www.tensorflow.org/get_started/os_setup)
-- [keras](https://keras.io/#installation)
+- [tensorflow](https://www.tensorflow.org/get_started/os_setup)   (tested with version 1.3.1)
+- [keras](https://keras.io/#installation)   (tested with version 2.1.2)
 
 ## Usage
 ```
@@ -22,24 +22,24 @@ Expected output:
 ```
 Predicting the Hieroglyph type...
 image name                ::: top 5 best matching hieroglyphs
-200000_S29.png            --> ['S29' 'V25' 'V7' 'O4' 'V28']
-200001_V13.png            --> ['V13' 'D36' 'N18' 'T21' 'F18']
-200002_V13.png            --> ['V13' 'T30' 'U7' 'F18' 'N1']
-200003_G43.png            --> ['G43' 'G17' 'G21' 'E1' 'G25']
-200004_D21.png            --> ['D21' 'N19' 'V30' 'G43' 'X6']
-200005_O50.png            --> ['O50' 'N5' 'O49' 'W24' 'D1']
-200006_X1.png             --> ['X1' 'G43' 'D4' 'N29' 'D21']
-200007_M23.png            --> ['M23' 'M26' 'G39' 'U35' 'M12']
-200008_G43.png            --> ['G43' 'G21' 'G29' 'M17' 'G1']
-200009_S29.png            --> ['S29' 'O4' 'Y3' 'V25' 'M195']
-200010_V13.png            --> ['V13' 'T30' 'D52' 'U7' 'D36']
-200011_M23.png            --> ['M23' 'M17' 'D56' 'M26' 'U1']
-200012_G43.png            --> ['G43' 'G35' 'G21' 'M23' 'G4']
-200013_D21.png            --> ['D21' 'O34' 'O29' 'N14' 'N19']
-200014_O50.png            --> ['O50' 'G17' 'X1' 'N17' 'D19']
-200015_V13.png            --> ['V13' 'D46' 'V31' 'F22' 'N36']
-200016_G43.png            --> ['G43' 'G17' 'G1' 'W14' 'G4']
-200017_S29.png            --> ['S29' 'O4' 'V28' 'Z7' 'N35']
+200000_S29.png            --> ['S29' 'U33' 'R8' 'F12' 'Y3']
+200001_V13.png            --> ['V13' 'N37' 'N18' 'V4' 'N35']
+200002_V13.png            --> ['V13' 'V31' 'F22' 'N18' 'D156']
+200003_G43.png            --> ['G43' 'G17' 'G21' 'W25' 'G25']
+200004_D21.png            --> ['D21' 'V30' 'O50' 'D10' 'N5']
+200005_O50.png            --> ['O50' 'N5' 'X6' 'D21' 'V25']
+200006_X1.png             --> ['X1' 'N29' 'G1' 'D19' 'G4']
+200007_M23.png            --> ['M23' 'G39' 'G25' 'I10' 'Aa26']
+200008_G43.png            --> ['G43' 'G39' 'G29' 'G1' 'G4']
+200009_S29.png            --> ['S29' 'Y3' 'D34' 'N5' 'W18']
+200010_V13.png            --> ['V13' 'D52' 'N18' 'G17' 'F22']
+200011_M23.png            --> ['M23' 'F16' 'U1' 'N14' 'M4']
+200012_G43.png            --> ['G43' 'G21' 'G39' 'G1' 'G17']
+200013_D21.png            --> ['D21' 'T30' 'N5' 'X6' 'U1']
+200014_O50.png            --> ['O50' 'X1' 'V31' 'U33' 'U1']
+200015_V13.png            --> ['V13' 'F22' 'D36' 'D46' 'V4']
+200016_G43.png            --> ['G43' 'G17' 'G5' 'G7' 'G4']
+200017_S29.png            --> ['S29' 'M195' 'M17' 'W18' 'M1']
 ```
 
 ## Training

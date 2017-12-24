@@ -24,9 +24,9 @@ svmPath = join(intermediatePath, "svm.pkl")
 
 # Input parameters, could be a path to an image or directory. In the case of a directory, all files in that directory will be evaluated
 # If no parameters are specified, the default example folder will be used
-inputPath = sys.argv[1] if len(sys.argv) > 1 else "examples"
+inputPath = sys.argv[1] if len(sys.argv) > 1 else examplePath
 if isdir(inputPath):
-    imagePaths = [join(inputPath, f) for f in listdir(inputPath) if isfile(join(inputPath, f))]
+    imagePaths = [join(inputPath, f) for f in listdir(inputPath) if f.endswith(('.png', '.jpg'))]
 else:
     imagePaths = [inputPath,]
     
@@ -35,7 +35,7 @@ Images = loadBatch(imagePaths)
 print("loading SVM model...")
 clf = joblib.load(svmPath);
     
-print("Extracting features, this may take a while for large collections of images...")
+print("Extracting features, this may take a while for large collections of images...") # should probably use batches for this as well
 extractor = FeatureExtractor()
 features  = extractor.get_features(Images)
 

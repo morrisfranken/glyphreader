@@ -36,7 +36,7 @@ if not exists(dataPath):
         z.extractall(join(dataPath, ".."))
 
 # check if the feature file is present, if so; there is no need to recompute the features
-# The pre-computed features can also be downloiad from http://iamai.nl/downloads/features.npy
+# The pre-computed features can also be downloaded from http://iamai.nl/downloads/features.npy
 if not isfile(featurePath):
     print("indexing images...")
     Steles = [ join(stelePath,f) for f in listdir(stelePath) if isdir(join(stelePath,f)) ]
